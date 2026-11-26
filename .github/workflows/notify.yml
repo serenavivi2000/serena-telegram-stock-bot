@@ -3,7 +3,8 @@ name: Telegram 股票主動通知
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: '30 1 * * 1-5'
 jobs:
   telegram-notify:
     runs-on: ubuntu-latest
