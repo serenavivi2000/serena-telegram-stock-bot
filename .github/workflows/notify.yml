@@ -1,5 +1,5 @@
 
-name: Telegram 主動通知
+name: Telegram 股票主動通知
 
 on:
   workflow_dispatch:
@@ -15,5 +15,5 @@ jobs:
           CHAT_ID: ${{ secrets.CHAT_ID }}
         run: |
           curl -s -X POST "https://api.telegram.org/bot${BOT_TOKEN}/sendMessage" \
-            -d chat_id="${CHAT_ID}" \
-            -d text="Telegram Bot 主動通知測試成功"
+            -d "chat_id=${CHAT_ID}" \
+            -d "text=Telegram Bot 主動通知測試成功"
